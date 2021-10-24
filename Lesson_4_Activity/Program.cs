@@ -6,107 +6,122 @@ namespace Lesson_4_Activity
     {
         static void Main(string[] args)
         {
-            /*
-            //Part 1
-            var number = new Random().Next(1, 11);
+            Console.WriteLine("This is a number guessing game. Choose how many guesses you'd like to make.");
 
-            Console.WriteLine("Pick a number from 1 to 10: ");
-            var guess = int.Parse(Console.ReadLine());
+            Console.WriteLine("For 1 guess only, enter: 1");
+            Console.WriteLine("For 3 guesses, enter: 3");
+            Console.WriteLine("For infinite guesses, enter: infinite");
 
-            if(guess == number)
+            string whichGame = Console.ReadLine().ToLower().Trim();
+
+            switch(whichGame)
             {
-                Console.WriteLine($"Your guess is correct! The number is {number}.");
-            }
-            else
-            {   
-                Console.WriteLine($"You guess is incorrect. The number is {number}. Better luck  next time.");
-            }
-            */
+                case "1":
 
-            /*
-            //Part 2
-            //User has 3 guesses
-            //Hints: too low, too high, cold and hot
+                    //Part 1
+                    var oneNumber = new Random().Next(1, 11);
 
-            var number = new Random().Next(1, 11);
-            var allowedGuesses = 3;
-            var numberOfGuesses = 0;
+                    Console.WriteLine("Pick a number from 1 to 10: ");
+                    var guess = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Pick a number from 1 to 10: ");
+                    if(guess == oneNumber)
+                    {
+                        Console.WriteLine($"Your guess is correct! The number is {oneNumber}.");
+                    }
+                    else
+                    {   
+                      Console.WriteLine($"You guess is incorrect. The number is {oneNumber}. Better luck  next time.");
+                    }
+                    break;
 
-            while (true)
-            {
-                var guess = int.Parse(Console.ReadLine());
-                var difference = Math.Abs(guess - number);
+                case "3":
 
-                numberOfGuesses++;
+                    //Part 2
+                    //User has 3 guesses
+                    //Hints: too low, too high, cold and hot
+
+                    var threeNumber = new Random().Next(1, 11);
+                    var allowedGuesses = 3;
+                    var numberOfGuesses = 0;
+
+                    Console.WriteLine("Pick a number from 1 to 10: ");
+
+                    while (true)
+                    {
+                        var threeGuess = int.Parse(Console.ReadLine());
+                        var difference = Math.Abs(threeGuess - threeNumber);
+
+                        numberOfGuesses++;
                
-                if (guess == number)
-                {  
-                    Console.WriteLine($"Your guess is correct! The number is {number}.");
+                        if (threeGuess == threeNumber)
+                        {  
+                            Console.WriteLine($"Your guess is correct! The number is {threeNumber}.");
+                        break;
+                        }
+                        if (difference <= 2 && threeGuess < threeNumber)
+                        {
+                            Console.WriteLine("Your guess is hot, but too low!");
+                        }
+                        if (difference <= 2 && threeGuess > threeNumber)
+                        {
+                            Console.WriteLine("Your guess is hot, but too high!");
+                        }                         
+                        if (difference > 2 && threeGuess > threeNumber)
+                        {
+                            Console.WriteLine("Your guess is cold, and too high!");
+                        }
+                        if (difference > 2 && threeGuess < threeNumber)
+                        {
+                            Console.WriteLine("Your guess is cold, and too low!");
+                        }
+                        if (numberOfGuesses == allowedGuesses)
+                        {
+                            Console.WriteLine($"The number is: {threeNumber}. You have no guesses left. Better luck next time!");
+                            break;
+                        }
+                        Console.Write($"You have {allowedGuesses - numberOfGuesses} guesses left. Enter another number: ");
+                    }
                     break;
-                }
-                if (difference <= 2 && guess < number)
-                {
-                    Console.WriteLine("Your guess is hot, but too low!");
-                }
-                if (difference <= 2 && guess > number)
-                {
-                    Console.WriteLine("Your guess is hot, but too high!");
-                }                         
-                if (difference > 2 && guess > number)
-                {
-                    Console.WriteLine("Your guess is cold, and too high!");
-                }
-                if (difference > 2 && guess < number)
-                {
-                    Console.WriteLine("Your guess is cold, and too low!");
-                }
-                if (numberOfGuesses == allowedGuesses)
-                {
-                    Console.WriteLine($"The number is: {number}. You have no guesses left. Better luck next time!");
-                    break;
-                }
-                Console.Write($"You have {allowedGuesses - numberOfGuesses} guesses left. Enter another number: ");
-            }
-            */
 
-            //Extension Activity
-            //User has infinite guesses
-            var number = new Random().Next(1, 10);
-            int guess = 0;
+                case "infinite":
+
+                     //Extension Activity
+                    //User has infinite guesses
+                    var number = new Random().Next(1, 11);
+                    int infiniteGuess = 0;
         
-            Console.WriteLine("Pick a number from 1 to 10.");
+                    Console.WriteLine("Pick a number from 1 to 10.");
 
-            while (guess != number)
-            {
-                Console.Write("What is your guess?: ");
-                var guessText = int.Parse(Console.ReadLine());
-                guess = guessText;
-                var difference = Math.Abs(guessText - number);
+                    while (infiniteGuess != number)
+                    {
+                        Console.Write("What is your guess?: ");
+                        infiniteGuess = int.Parse(Console.ReadLine());
+                        var difference = Math.Abs(infiniteGuess - number);
 
-                if (guess == number)
-                {
-                    Console.WriteLine($"Your guess is correct! The number is {number}. Thank you for playing.");
-                }
-                else if (difference <= 2 && guess < number)
-                {
-                    Console.WriteLine("Your guess is hot, but too low!");
-                }
-                else if (difference <= 2 && guess > number)
-                {
-                    Console.WriteLine("Your guess is hot, but too high!");
-                }                         
-                else if (difference > 2 && guess > number)
-                {
-                    Console.WriteLine("Your guess is cold, and too high!");
-                }
-                else
-                {
-                    Console.WriteLine("Your guess is cold, and too low!");
-                }                
-            }
-        }
+                        if (infiniteGuess == number)
+                        {
+                            Console.WriteLine($"Your guess is correct! The number is {number}. Thank you for playing.");
+                        }
+                        else if (difference <= 2 && infiniteGuess < number)
+                        {
+                            Console.WriteLine("Your guess is hot, but too low!");
+                        }
+                        else if (difference <= 2 && infiniteGuess > number)
+                        {
+                            Console.WriteLine("Your guess is hot, but too high!");
+                        }                         
+                        else if (difference > 2 && infiniteGuess > number)
+                        {
+                            Console.WriteLine("Your guess is cold, and too high!");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Your guess is cold, and too low!");
+                        }   
+                    }
+                    break;
+            }      
+         }
     }
 }
     
