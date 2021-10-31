@@ -1,0 +1,15 @@
+/Users/jopittendreigh/Documents/C#/Lesson_5_Arrays_and_Lists/Lesson_5_Activity/Lesson_5_Activity_Create _app/bin/Debug/net5.0/Lesson_5_Activity_Create _app.deps.json
+/Users/jopittendreigh/Documents/C#/Lesson_5_Arrays_and_Lists/Lesson_5_Activity/Lesson_5_Activity_Create _app/bin/Debug/net5.0/Lesson_5_Activity_Create _app.runtimeconfig.json
+/Users/jopittendreigh/Documents/C#/Lesson_5_Arrays_and_Lists/Lesson_5_Activity/Lesson_5_Activity_Create _app/bin/Debug/net5.0/Lesson_5_Activity_Create _app.runtimeconfig.dev.json
+/Users/jopittendreigh/Documents/C#/Lesson_5_Arrays_and_Lists/Lesson_5_Activity/Lesson_5_Activity_Create _app/bin/Debug/net5.0/Lesson_5_Activity_Create _app.dll
+/Users/jopittendreigh/Documents/C#/Lesson_5_Arrays_and_Lists/Lesson_5_Activity/Lesson_5_Activity_Create _app/bin/Debug/net5.0/ref/Lesson_5_Activity_Create _app.dll
+/Users/jopittendreigh/Documents/C#/Lesson_5_Arrays_and_Lists/Lesson_5_Activity/Lesson_5_Activity_Create _app/bin/Debug/net5.0/Lesson_5_Activity_Create _app.pdb
+/Users/jopittendreigh/Documents/C#/Lesson_5_Arrays_and_Lists/Lesson_5_Activity/Lesson_5_Activity_Create _app/obj/Debug/net5.0/Lesson_5_Activity_Create _app.csproj.AssemblyReference.cache
+/Users/jopittendreigh/Documents/C#/Lesson_5_Arrays_and_Lists/Lesson_5_Activity/Lesson_5_Activity_Create _app/obj/Debug/net5.0/Lesson_5_Activity_Create _app.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jopittendreigh/Documents/C#/Lesson_5_Arrays_and_Lists/Lesson_5_Activity/Lesson_5_Activity_Create _app/obj/Debug/net5.0/Lesson_5_Activity_Create _app.AssemblyInfoInputs.cache
+/Users/jopittendreigh/Documents/C#/Lesson_5_Arrays_and_Lists/Lesson_5_Activity/Lesson_5_Activity_Create _app/obj/Debug/net5.0/Lesson_5_Activity_Create _app.AssemblyInfo.cs
+/Users/jopittendreigh/Documents/C#/Lesson_5_Arrays_and_Lists/Lesson_5_Activity/Lesson_5_Activity_Create _app/obj/Debug/net5.0/Lesson_5_Activity_Create _app.csproj.CoreCompileInputs.cache
+/Users/jopittendreigh/Documents/C#/Lesson_5_Arrays_and_Lists/Lesson_5_Activity/Lesson_5_Activity_Create _app/obj/Debug/net5.0/Lesson_5_Activity_Create _app.dll
+/Users/jopittendreigh/Documents/C#/Lesson_5_Arrays_and_Lists/Lesson_5_Activity/Lesson_5_Activity_Create _app/obj/Debug/net5.0/ref/Lesson_5_Activity_Create _app.dll
+/Users/jopittendreigh/Documents/C#/Lesson_5_Arrays_and_Lists/Lesson_5_Activity/Lesson_5_Activity_Create _app/obj/Debug/net5.0/Lesson_5_Activity_Create _app.pdb
+/Users/jopittendreigh/Documents/C#/Lesson_5_Arrays_and_Lists/Lesson_5_Activity/Lesson_5_Activity_Create _app/obj/Debug/net5.0/Lesson_5_Activity_Create _app.genruntimeconfig.cache
