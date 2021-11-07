@@ -427,7 +427,8 @@ namespace CourseCoordinator
 						Console.WriteLine("I didn't recognise that command.");
 						break;
 				}
-				break;
+				Console.WriteLine("Press any key to continue");
+				Console.ReadKey();
 			}
 		}
 	}
