@@ -50,17 +50,17 @@ namespace CourseCoordinator
 					case "students":
 						Console.WriteLine("Here is a list of students:");
 						foreach(var student in students)
-                        {       
-                            Console.WriteLine($"\t" + char.ToUpper(student[0]) + student.Substring(1));
-                        }						
+						{       
+						    Console.WriteLine($"\t" + char.ToUpper(student[0]) + student.Substring(1));
+						}						
 						break;
 						
 					case "courses":
 						Console.WriteLine("Here is a list of courses offered:");
 						foreach(var course in courses)
-                        {       
-                            Console.WriteLine($"\t" + char.ToUpper(course[0]) + course.Substring(1));
-                        }						
+						{       
+						    Console.WriteLine($"\t" + char.ToUpper(course[0]) + course.Substring(1));
+						}						
 						break;
 
 					case "enrol":					
@@ -83,12 +83,12 @@ namespace CourseCoordinator
 						var studentInput = new List<string>();
 
 						//Ask user to input new students
-        				Console.WriteLine("To enrol a new student, enter student's name:");
+        					Console.WriteLine("To enrol a new student, enter student's name:");
 						// User input converted to lower case
-        				var input = Console.ReadLine().ToLower();
+        					var input = Console.ReadLine().ToLower();
 
 						// While the input contains text
-        				while (!string.IsNullOrEmpty(input))
+        					while (!string.IsNullOrEmpty(input))
 						{
 							//Add user input to new list
 							studentInput.Add(input);
@@ -96,7 +96,7 @@ namespace CourseCoordinator
 							Console.WriteLine("To enrol another student, enter student's name (otherwise, hit Enter):");
 							// User input converted to lower case
 							input = Console.ReadLine().ToLower();
-      					}		
+      						}		
 	
 						//if there are students in the new list, list the new students
 						if (studentInput.Count > 0)
@@ -122,7 +122,7 @@ namespace CourseCoordinator
 							// Capitalise first letter in student's name
 							Console.WriteLine("\t" + char.ToUpper(student[0]) + student.Substring(1));
 						}
-					break;
+						break;
 						
 					case "unenrol":
 						//Create new list for unenrolled students
@@ -185,20 +185,20 @@ namespace CourseCoordinator
 						var courseInput = new List<string>();
 		
 						//Ask user to input new course name
-        				Console.Write("To add a course, enter course name: ");
+        					Console.Write("To add a course, enter course name: ");
 						//User input converted to lower case
-        				var newCourse = Console.ReadLine().ToLower();
+        					var newCourse = Console.ReadLine().ToLower();
 						
 						//While input contains text
-        				while (!string.IsNullOrEmpty(newCourse))
-        				{
-							//New course added to new course  list
-							courseInput.Add(newCourse);
-							//Ask the user to enter another course
-							Console.WriteLine("To add another course, enter course name (otherwise, hit Enter):");
-							//User input converted to lower case
-							newCourse = Console.ReadLine().ToLower();
-      					}		
+						while (!string.IsNullOrEmpty(newCourse))
+						{
+								//New course added to new course  list
+								courseInput.Add(newCourse);
+								//Ask the user to enter another course
+								Console.WriteLine("To add another course, enter course name (otherwise, hit Enter):");
+								//User input converted to lower case
+								newCourse = Console.ReadLine().ToLower();
+						}		
 	
 						//if there are courses in the new list, list the new courses
 						if (courseInput.Count > 0)
@@ -306,8 +306,8 @@ namespace CourseCoordinator
 							default:
 								Console.WriteLine("I didn't recognise that command.");
 								break;
-							}
-							break;
+						}
+						break;
 						
 					case "courseenrol":
 						Console.WriteLine("Enter the course name to check if the course has an enrolment limit:");
