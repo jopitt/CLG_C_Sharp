@@ -1,0 +1,15 @@
+/Users/jopittendreigh/Documents/C#/Lesson_6_Methods/Lesson_6_Activity/bin/Debug/net5.0/Lesson_6_Activity.deps.json
+/Users/jopittendreigh/Documents/C#/Lesson_6_Methods/Lesson_6_Activity/bin/Debug/net5.0/Lesson_6_Activity.runtimeconfig.json
+/Users/jopittendreigh/Documents/C#/Lesson_6_Methods/Lesson_6_Activity/bin/Debug/net5.0/Lesson_6_Activity.runtimeconfig.dev.json
+/Users/jopittendreigh/Documents/C#/Lesson_6_Methods/Lesson_6_Activity/bin/Debug/net5.0/Lesson_6_Activity.dll
+/Users/jopittendreigh/Documents/C#/Lesson_6_Methods/Lesson_6_Activity/bin/Debug/net5.0/ref/Lesson_6_Activity.dll
+/Users/jopittendreigh/Documents/C#/Lesson_6_Methods/Lesson_6_Activity/bin/Debug/net5.0/Lesson_6_Activity.pdb
+/Users/jopittendreigh/Documents/C#/Lesson_6_Methods/Lesson_6_Activity/obj/Debug/net5.0/Lesson_6_Activity.csproj.AssemblyReference.cache
+/Users/jopittendreigh/Documents/C#/Lesson_6_Methods/Lesson_6_Activity/obj/Debug/net5.0/Lesson_6_Activity.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jopittendreigh/Documents/C#/Lesson_6_Methods/Lesson_6_Activity/obj/Debug/net5.0/Lesson_6_Activity.AssemblyInfoInputs.cache
+/Users/jopittendreigh/Documents/C#/Lesson_6_Methods/Lesson_6_Activity/obj/Debug/net5.0/Lesson_6_Activity.AssemblyInfo.cs
+/Users/jopittendreigh/Documents/C#/Lesson_6_Methods/Lesson_6_Activity/obj/Debug/net5.0/Lesson_6_Activity.csproj.CoreCompileInputs.cache
+/Users/jopittendreigh/Documents/C#/Lesson_6_Methods/Lesson_6_Activity/obj/Debug/net5.0/Lesson_6_Activity.dll
+/Users/jopittendreigh/Documents/C#/Lesson_6_Methods/Lesson_6_Activity/obj/Debug/net5.0/ref/Lesson_6_Activity.dll
+/Users/jopittendreigh/Documents/C#/Lesson_6_Methods/Lesson_6_Activity/obj/Debug/net5.0/Lesson_6_Activity.pdb
+/Users/jopittendreigh/Documents/C#/Lesson_6_Methods/Lesson_6_Activity/obj/Debug/net5.0/Lesson_6_Activity.genruntimeconfig.cache
