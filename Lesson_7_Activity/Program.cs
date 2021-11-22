@@ -8,13 +8,6 @@ namespace Lesson_7_Activity
         static void Main(string[] args)
         {
 
-            /*Extension: (if you complete tasks 1 and 2, the extension task is to make this application interactive)
-            Adapt the application so that it will accept commands from a user, and show the user what they want depending on what command they use. Allow the user to enter the commands
-            Books - to list books recommended by the book club
-            Members - to list the members
-            Allow users to add new members
-            Allow users to add new books to the recommended books list*/
-            
             var books = ListBooks();
             var members = ListMembers();
 
@@ -67,7 +60,7 @@ namespace Lesson_7_Activity
             {
                 firstName = "Audrey",
                 lastName = "Bowler",
-                favouriteBook = "To Kill a Mockingbird by Harper Lee",
+                favouriteBook = ListBooks().Find(x => x.title == "To Kill a Mockingbird"),
                 readingList = new List<Book>
                 {
                     new Book() {title = "The Lion, the Witch and the Wardrobe (Chronicles of Narnia, # 1)", author = "C.S. Lewis"},
@@ -79,7 +72,7 @@ namespace Lesson_7_Activity
             {
                 firstName = "Daisy",
                 lastName = "Flower",
-                favouriteBook = "The Catcher in the Rye by J.D. Salinger",
+                favouriteBook = ListBooks().Find(x => x.title == "The Catcher in the Rye"),
                 readingList = new List<Book>
                 {
                     new Book() {title = "The Lion, the Witch and the Wardrobe (Chronicles of Narnia, # 1)", author = "C.S. Lewis"},
@@ -91,7 +84,7 @@ namespace Lesson_7_Activity
             {
                 firstName = "Meredith",
                 lastName = "Mason",
-                favouriteBook = "The Lord of the Rings by J.R.R. Tolkien",
+                favouriteBook = ListBooks().Find(x => x.title == "The Lion, the Witch and the Wardrobe (Chronicles of Narnia, # 1)"),
                 readingList = new List<Book>
                 {
                     new Book() {title = "1984", author = "George Orwell"},
@@ -160,7 +153,7 @@ namespace Lesson_7_Activity
                     foreach(var member in members)
                     {
                         Console.WriteLine($"{member.firstName}'s favourite book:");
-                        Console.WriteLine($"\t {member.favouriteBook}");
+                        Console.WriteLine($"\t {member.favouriteBook.title} by {member.favouriteBook.author}");
                         Console.WriteLine();
                     }
                     break;
@@ -180,13 +173,29 @@ namespace Lesson_7_Activity
                 case "addmember":				
                     Console.WriteLine("Enter person's first name:");
                     var firstName = Console.ReadLine();
+                    
                     Console.WriteLine("Enter person's last name:");
                     var lastName = Console.ReadLine();
-                    //????
+                    
+                    var newMember = new Member{firstName = firstName, lastName = lastName, favouriteBook = new Book(), readingList = new List<Book>()};
+                    members.Add(newMember);
+                    
+                    Console.WriteLine($"{firstName} {lastName} has been added to the book club.");
+                    
                     break;
                     
                 case "addbook":
-                    //code to add book
+                    Console.WriteLine("Enter title:");
+                    var title = Console.ReadLine();
+                    
+                    Console.WriteLine("Enter author:");
+                    var author = Console.ReadLine();
+                    
+                    var newBook = new Book{title = title, author = author};
+                    books.Add(newBook);
+                    
+                    Console.WriteLine($"{newBook.title} by {newBook.author} has been added to the book list.");
+
                     break;
 
                 default:
@@ -209,7 +218,7 @@ namespace Lesson_7_Activity
     {
         public string firstName;
         public string lastName;
-        public string favouriteBook;
+        public Book favouriteBook;
         public List<Book> readingList;
 		
 		public void ListMemberDetails()
