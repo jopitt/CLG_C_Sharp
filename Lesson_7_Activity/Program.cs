@@ -7,18 +7,17 @@ namespace Lesson_7_Activity
     {
         static void Main(string[] args)
         {
-
             var books = ListBooks();
             var members = ListMembers();
 
             Console.WriteLine("Welcome to the Book Club!");
             
             WaitForUserInput(books, members);
-
         }
-
+	
+	
         static List<Book> ListBooks()
-	    {   
+        {
             var book1 = new Book
             {
                 title = "To Kill a Mockingbird",
@@ -53,7 +52,7 @@ namespace Lesson_7_Activity
 
             return books;
         }
-
+        
         static List<Member> ListMembers()
         {
             var member1 = new Member
@@ -61,11 +60,8 @@ namespace Lesson_7_Activity
                 firstName = "Audrey",
                 lastName = "Bowler",
                 favouriteBook = ListBooks().Find(x => x.title == "To Kill a Mockingbird"),
-                readingList = new List<Book>
-                {
-                    new Book() {title = "The Lion, the Witch and the Wardrobe (Chronicles of Narnia, # 1)", author = "C.S. Lewis"},
-                    new Book () {title = "The Catcher in the Rye", author = "J.D. Salinger"}
-                }										   
+                readingList = new List<Book>{ListBooks().Find(x => x.title == "The Catcher in the Rye"), ListBooks().Find(x => x.title == "The Lord of the Rings")}			
+                                                    
             };
 
             var member2 = new Member
@@ -73,11 +69,8 @@ namespace Lesson_7_Activity
                 firstName = "Daisy",
                 lastName = "Flower",
                 favouriteBook = ListBooks().Find(x => x.title == "The Catcher in the Rye"),
-                readingList = new List<Book>
-                {
-                    new Book() {title = "The Lion, the Witch and the Wardrobe (Chronicles of Narnia, # 1)", author = "C.S. Lewis"},
-                    new Book () {title = "The Lord of the Rings", author = "J.R.R. Tolkien"}
-                }
+                readingList = new List<Book>{ListBooks().Find(x => x.title == "The Lion, the Witch and the Wardrobe (Chronicles of Narnia, # 1)"),
+                                                            ListBooks().Find(x => x.title == "The Lord of the Rings")}
             };
 
             var member3 = new Member
@@ -85,18 +78,16 @@ namespace Lesson_7_Activity
                 firstName = "Meredith",
                 lastName = "Mason",
                 favouriteBook = ListBooks().Find(x => x.title == "The Lion, the Witch and the Wardrobe (Chronicles of Narnia, # 1)"),
-                readingList = new List<Book>
-                {
-                    new Book() {title = "1984", author = "George Orwell"},
-                    new Book () {title = "The Catcher in the Rye", author = "J.D. Salinger"}
-                }
+                readingList = new List<Book>{ListBooks().Find(x => x.title == "1984"),
+                                            ListBooks().Find(x => x.title == "The Catcher in the Rye")}
+                
             };
 
             var members = new List<Member> { member1, member2, member3 };
 
             return members;
         }
-	
+        
         static void WaitForUserInput(List<Book> books, List<Member> members)
         {		
             while (true)
@@ -113,7 +104,7 @@ namespace Lesson_7_Activity
                 RespondToUserCommand(userInput, books, members);
             }
         }
-	
+        
         static void GiveInstructions()
         {
             Console.WriteLine();
@@ -152,9 +143,8 @@ namespace Lesson_7_Activity
                 case "memberfav":
                     foreach(var member in members)
                     {
-                        Console.WriteLine($"{member.firstName}'s favourite book:");
+                        Console.WriteLine($"{member.firstName}'s favourite books is:");
                         Console.WriteLine($"\t {member.favouriteBook.title} by {member.favouriteBook.author}");
-                        Console.WriteLine();
                     }
                     break;
 
@@ -203,28 +193,31 @@ namespace Lesson_7_Activity
                     break;
                 }
         }
-    }
-    public class Book
-    {
-        public string title;
-        public string author;
-		
-        public void ListBookDetails()
+
+        public class Book
         {
-            Console.WriteLine($"\t {title} by {author}");
+            public string title;
+            public string author;
+            
+            public void ListBookDetails()
+            {
+                Console.WriteLine($"\t {title} by {author}");
+            }
         }
-    }
-    public class Member
-    {
-        public string firstName;
-        public string lastName;
-        public Book favouriteBook;
-        public List<Book> readingList;
-		
-		public void ListMemberDetails()
-		{
-			Console.WriteLine($"\t {firstName} {lastName}");
-		}
+        public class Member
+        {
+            public string firstName;
+            public string lastName;
+            public Book favouriteBook;
+            public List<Book> readingList;
+            
+            public void ListMemberDetails()
+            {
+                Console.WriteLine($"\t {firstName} {lastName}");
+            }
+        }
+
+	
 
 	}
     
