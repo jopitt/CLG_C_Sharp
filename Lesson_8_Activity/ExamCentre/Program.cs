@@ -29,7 +29,7 @@ namespace ExamCentre
             foreach (var student in exam.Students)
             {
                 Console.WriteLine($"{student.CandidateNumber}: {student.Score}");
-		    }	
+	    }	
         }  
     }
 }
