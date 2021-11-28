@@ -8,15 +8,15 @@ namespace ExamCentre.Models
         internal int CandidateNumber;
         internal int Score;
 		
-		public Student(string name, int candidateNumber)
-		{
-			Name = name;
-			CandidateNumber = candidateNumber;
-		}
-		
-		public void AddScore(int score)
-		{
-			Score = score;
-		}	
+	public Student(string name, int candidateNumber)
+	{
+		Name = name;
+		CandidateNumber = candidateNumber;
+	}
+
+	public void AddScore(int score)
+	{
+		Score = score;
+	}	
     }
 }
