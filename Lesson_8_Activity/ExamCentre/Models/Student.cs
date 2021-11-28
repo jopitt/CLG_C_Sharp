@@ -4,9 +4,9 @@ namespace ExamCentre.Models
 {
     public class Student
     {
-        private string Name;
-        internal int CandidateNumber;
-        internal int Score;
+        private string Name { get; set; }
+        internal int CandidateNumber { get; set; }
+        internal int Score { get; set; }
 		
 	public Student(string name, int candidateNumber)
 	{
