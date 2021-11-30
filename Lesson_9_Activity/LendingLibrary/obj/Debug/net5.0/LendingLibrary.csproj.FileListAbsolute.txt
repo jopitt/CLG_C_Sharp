@@ -1,0 +1,15 @@
+/Users/jopittendreigh/Documents/C#/Lesson_9_OOP_Principles/LendingLibrary/bin/Debug/net5.0/LendingLibrary.deps.json
+/Users/jopittendreigh/Documents/C#/Lesson_9_OOP_Principles/LendingLibrary/bin/Debug/net5.0/LendingLibrary.runtimeconfig.json
+/Users/jopittendreigh/Documents/C#/Lesson_9_OOP_Principles/LendingLibrary/bin/Debug/net5.0/LendingLibrary.runtimeconfig.dev.json
+/Users/jopittendreigh/Documents/C#/Lesson_9_OOP_Principles/LendingLibrary/bin/Debug/net5.0/LendingLibrary.dll
+/Users/jopittendreigh/Documents/C#/Lesson_9_OOP_Principles/LendingLibrary/bin/Debug/net5.0/ref/LendingLibrary.dll
+/Users/jopittendreigh/Documents/C#/Lesson_9_OOP_Principles/LendingLibrary/bin/Debug/net5.0/LendingLibrary.pdb
+/Users/jopittendreigh/Documents/C#/Lesson_9_OOP_Principles/LendingLibrary/obj/Debug/net5.0/LendingLibrary.csproj.AssemblyReference.cache
+/Users/jopittendreigh/Documents/C#/Lesson_9_OOP_Principles/LendingLibrary/obj/Debug/net5.0/LendingLibrary.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jopittendreigh/Documents/C#/Lesson_9_OOP_Principles/LendingLibrary/obj/Debug/net5.0/LendingLibrary.AssemblyInfoInputs.cache
+/Users/jopittendreigh/Documents/C#/Lesson_9_OOP_Principles/LendingLibrary/obj/Debug/net5.0/LendingLibrary.AssemblyInfo.cs
+/Users/jopittendreigh/Documents/C#/Lesson_9_OOP_Principles/LendingLibrary/obj/Debug/net5.0/LendingLibrary.csproj.CoreCompileInputs.cache
+/Users/jopittendreigh/Documents/C#/Lesson_9_OOP_Principles/LendingLibrary/obj/Debug/net5.0/LendingLibrary.dll
+/Users/jopittendreigh/Documents/C#/Lesson_9_OOP_Principles/LendingLibrary/obj/Debug/net5.0/ref/LendingLibrary.dll
+/Users/jopittendreigh/Documents/C#/Lesson_9_OOP_Principles/LendingLibrary/obj/Debug/net5.0/LendingLibrary.pdb
+/Users/jopittendreigh/Documents/C#/Lesson_9_OOP_Principles/LendingLibrary/obj/Debug/net5.0/LendingLibrary.genruntimeconfig.cache
