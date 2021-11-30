@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jopittendreigh/Documents/C#/Lesson_9_OOP_Principles/LendingLibrary/LendingLibrary.csproj": {}
+    "/Users/jopittendreigh/Documents/C#/Lesson_9_OOP_Principles/Lesson_9_Activity/LendingLibrary/LendingLibrary.csproj": {}
   },
   "projects": {
-    "/Users/jopittendreigh/Documents/C#/Lesson_9_OOP_Principles/LendingLibrary/LendingLibrary.csproj": {
+    "/Users/jopittendreigh/Documents/C#/Lesson_9_OOP_Principles/Lesson_9_Activity/LendingLibrary/LendingLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jopittendreigh/Documents/C#/Lesson_9_OOP_Principles/LendingLibrary/LendingLibrary.csproj",
+        "projectUniqueName": "/Users/jopittendreigh/Documents/C#/Lesson_9_OOP_Principles/Lesson_9_Activity/LendingLibrary/LendingLibrary.csproj",
         "projectName": "LendingLibrary",
-        "projectPath": "/Users/jopittendreigh/Documents/C#/Lesson_9_OOP_Principles/LendingLibrary/LendingLibrary.csproj",
+        "projectPath": "/Users/jopittendreigh/Documents/C#/Lesson_9_OOP_Principles/Lesson_9_Activity/LendingLibrary/LendingLibrary.csproj",
         "packagesPath": "/Users/jopittendreigh/.nuget/packages/",
-        "outputPath": "/Users/jopittendreigh/Documents/C#/Lesson_9_OOP_Principles/LendingLibrary/obj/",
+        "outputPath": "/Users/jopittendreigh/Documents/C#/Lesson_9_OOP_Principles/Lesson_9_Activity/LendingLibrary/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/jopittendreigh/.nuget/NuGet/NuGet.Config"

@@ -4,7 +4,6 @@ namespace LendingLibrary.Models
     {
         public string Author { get; set; }
 
-
     }
     
 }
