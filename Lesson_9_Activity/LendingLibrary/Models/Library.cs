@@ -20,7 +20,6 @@ namespace LendingLibrary.Models
 
         public Library()
         {
-            Novels = new List<Novel>();
             TextBooks = new List<TextBook>();
             Albums = new List<Album>();
             AudioBooks = new List<AudioBook>();
@@ -36,8 +35,20 @@ namespace LendingLibrary.Models
             Console.WriteLine($"{Name} - List of Novels:");
             foreach (var novel in Novels)
             {
-                Console.WriteLine($"\t {novel.Title}");
+                Console.WriteLine($"\t {novel.Title} by {novel.Author}, {novel.PublicationYear}, {novel.Genre}");
             }
+        }
+
+        public void SetNovels()
+        {
+            var novel1 = new Novel ("The Cat in the Hat", "Dr Suess", 1957, "Children");
+            var novel2 = new Novel ("Oh, the Places You'll Go", "Dr Suess", 1990, "Children");
+            var novel3 = new Novel ("Emma", "Jane Austen", 1815, "Literature");
+
+            AddNovel(novel1);
+            AddNovel(novel2);
+            AddNovel(novel3);
+            ListNovels();
         }
 
         public void AddTextBook(TextBook textBook)
@@ -50,8 +61,21 @@ namespace LendingLibrary.Models
             Console.WriteLine($"{Name} - List of Text Books:");
             foreach (var textBook in TextBooks)
             {
-                Console.WriteLine($"\t {textBook.Title}");
+                Console.WriteLine($"\t {textBook.Title} by {textBook.Author}, {textBook.PublicationYear}, {textBook.Subject}");
             }
+        }
+
+        public void SetTextbooks()
+        {
+             var textbook1 = new TextBook ("Fundamentals of Chemistry", "Kate Rowan", 2018, "Chemistry");
+            var textbook2 = new TextBook ("Neurosurgical Care of the Elderley", "Warren R. Selman and Edward Benzel", 1999, "Medicine");
+            var textbook3 = new TextBook ("The New Lawyer", "Nickolas James and Rachael Field", 2019, "Law");
+
+            AddTextBook(textbook1);
+            AddTextBook(textbook2);
+            AddTextBook(textbook3);
+
+            ListTextBooks();
         }
 
         public void AddAlbum(Album album)
@@ -64,8 +88,19 @@ namespace LendingLibrary.Models
             Console.WriteLine($"{Name} - List of Albums:");
             foreach (var album in Albums)
             {
-                Console.WriteLine($"\t {album.Title}");
+                Console.WriteLine($"\t {album.Title} by {album.Artist}, {album.PublicationYear}, {album.NumberOfTracks} tracks");
             }
+        }
+
+        public void SetAlbums()
+        {
+            var album1 = new Album ("Abbey Road", "The Beatles", 10, 1969);
+            var album2 = new Album ("Back to Black", "Amy Winehouse", 11, 2006);
+
+            AddAlbum(album1);
+            AddAlbum(album2);
+
+            ListAlbums();
         }
         public void AddAudioBook(AudioBook audioBook)
         {
@@ -77,8 +112,19 @@ namespace LendingLibrary.Models
             Console.WriteLine($"{Name} - List of Audio Books:");
             foreach (var audioBook in AudioBooks)
             {
-                Console.WriteLine($"\t {audioBook.Title}");
+                Console.WriteLine($"\t {audioBook.Title} by {audioBook.Author}, {audioBook.PublicationYear}, {audioBook.NumberOfTracks} tracks");
             }
+        }
+
+        public void SetAudioBooks()
+        {
+            var audioBook1 = new AudioBook ("Dune", "Frank Herbert", 21, 2007);
+            var audioBook2 = new AudioBook ("The Eye of the World: Book One of the Wheel of Time", "Robert Jordan", 50, 2004);
+
+            AddAudioBook(audioBook1);
+            AddAudioBook(audioBook2);
+
+            ListAudioBooks();
         }
 
         public void AddBorrower(Borrower borrower)
@@ -93,6 +139,19 @@ namespace LendingLibrary.Models
             {
                 Console.WriteLine($"\t {borrower.MemberName}, {borrower.MemberNumber}");
             }
+        }
+
+        public void SetBorrowers()
+        {
+            var borrower1 = new Borrower ("Jane Lacey", 1111);
+            var borrower2 = new Borrower ("Lilith Jones", 1112);
+            var borrower3 = new Borrower ("Casey Bourne", 1113);
+
+            AddBorrower(borrower1);
+            AddBorrower(borrower2);
+            AddBorrower(borrower3);
+
+            ListBorrowers();
         }
 
         public void AddLibraryItems()
@@ -185,6 +244,11 @@ namespace LendingLibrary.Models
                         Console.WriteLine();
                         ListAudioBooks();
                         break;
+
+                    default:
+                    Console.WriteLine("I didn't recognise that command.");
+                    break;
+                    
                 }
 
             }
