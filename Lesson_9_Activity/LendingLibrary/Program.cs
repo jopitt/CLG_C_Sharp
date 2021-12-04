@@ -15,6 +15,8 @@ namespace LendingLibrary
             library.SetTextbooks();
 
             library.SetAlbums();
+            
+            library.SetAudioBooks();
 
             library.SetBorrowers();
 
