@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace LendingLibrary.Models
 {
@@ -171,19 +172,22 @@ namespace LendingLibrary.Models
                     break;
                 }
 
+                TextInfo myTI = new CultureInfo("en-US",false).TextInfo;
+
+
                 switch(userInput.ToLower())
                 {
                     case "novel":
 
                         Console.WriteLine("Enter title:");
-                        var title = Console.ReadLine();
+                        var title = Console.ReadLine().ToLower();
                         Console.WriteLine("Enter author:");
-                        var author = Console.ReadLine();
+                        var author = Console.ReadLine().ToLower();
                         Console.WriteLine("Enter the publication year:");
                         var publicationYear = int.Parse(Console.ReadLine());
                         Console.WriteLine("Enter genre:");
-                        var genre = Console.ReadLine();
-                        var newNovel = new Novel (title, author, publicationYear, genre);
+                        var genre = Console.ReadLine().ToLower();
+                        var newNovel = new Novel (myTI.ToTitleCase(title), myTI.ToTitleCase(author), publicationYear, myTI.ToTitleCase(genre));
                         AddNovel(newNovel);
                                 
                         Console.WriteLine($"{newNovel.Title} by {newNovel.Author} has been added to the Library.");
@@ -194,14 +198,14 @@ namespace LendingLibrary.Models
                     case "textbook":
 
                         Console.WriteLine("Enter title:");
-                        var textbookTitle = Console.ReadLine();
+                        var textbookTitle = Console.ReadLine().ToLower();
                         Console.WriteLine("Enter author:");
-                        var textbookAuthor = Console.ReadLine();
+                        var textbookAuthor = Console.ReadLine().ToLower();
                         Console.WriteLine("Enter the publication year:");
                         var textbookPublicationYear = int.Parse(Console.ReadLine());
                         Console.WriteLine("Enter subject:");
-                        var subject = Console.ReadLine();
-                        var newTextbook = new TextBook (title = textbookTitle, author = textbookAuthor, publicationYear = textbookPublicationYear, subject);
+                        var subject = Console.ReadLine().ToLower();
+                        var newTextbook = new TextBook (myTI.ToTitleCase(title = textbookTitle), myTI.ToTitleCase(author = textbookAuthor), publicationYear = textbookPublicationYear, myTI.ToTitleCase(subject));
                         AddTextBook(newTextbook);
                                 
                         Console.WriteLine($"{newTextbook.Title} by {newTextbook.Author} has been added to the Library.");
@@ -212,15 +216,16 @@ namespace LendingLibrary.Models
                     case "album":
 
                         Console.WriteLine("Enter title:");
-                        var albumTitle = Console.ReadLine();
+                        var albumTitle = Console.ReadLine().ToLower();
                         Console.WriteLine("Enter artist:");
-                        var artist = Console.ReadLine();
+                        var artist = Console.ReadLine().ToLower();
                         Console.WriteLine("Enter number of tracks:");
                         var numberOfTracks = int.Parse(Console.ReadLine());
                         Console.WriteLine("Enter the publication year:");
                         var albumPublicationYear = int.Parse(Console.ReadLine());
-                        var newAlbum = new Album (title = albumTitle, artist, numberOfTracks, publicationYear = albumPublicationYear);
+                        var newAlbum = new Album (myTI.ToTitleCase(title = albumTitle), myTI.ToTitleCase(artist), numberOfTracks, publicationYear = albumPublicationYear);
                         AddAlbum(newAlbum);
+                        
                                 
                         Console.WriteLine($"{newAlbum.Title} by {newAlbum.Artist} has been added to the Library.");
                         Console.WriteLine();
@@ -230,14 +235,14 @@ namespace LendingLibrary.Models
                     case "audiobook":
 
                         Console.WriteLine("Enter title:");
-                        var audiobookTitle = Console.ReadLine();
+                        var audiobookTitle = Console.ReadLine().ToLower();
                         Console.WriteLine("Enter author:");
-                        var audiobookAuthor = Console.ReadLine();
+                        var audiobookAuthor = Console.ReadLine().ToLower();
                         Console.WriteLine("Enter number of tracks:");
                         var audiobookNumberOfTracks = int.Parse(Console.ReadLine());
                         Console.WriteLine("Enter the publication year:");
                         var audiobookPublicationYear = int.Parse(Console.ReadLine());
-                        var newAudiobook = new AudioBook (title = audiobookTitle, author = audiobookAuthor, numberOfTracks = audiobookNumberOfTracks, publicationYear = audiobookPublicationYear);
+                        var newAudiobook = new AudioBook (myTI.ToTitleCase(title = audiobookTitle), myTI.ToTitleCase(author = audiobookAuthor), numberOfTracks = audiobookNumberOfTracks, publicationYear = audiobookPublicationYear);
                         AddAudioBook(newAudiobook);
                                 
                         Console.WriteLine($"{newAudiobook.Title} by {newAudiobook.Author} has been added to the Library.");
