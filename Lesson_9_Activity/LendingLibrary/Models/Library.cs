@@ -11,24 +11,22 @@ namespace LendingLibrary.Models
         public List<TextBook> TextBooks = new List<TextBook>();
         public List<Album> Albums = new List<Album>();
         public List<AudioBook> AudioBooks = new List<AudioBook>();
-
         internal List<Borrower> Borrowers = new List<Borrower>();
+        TextInfo titleCase = new CultureInfo("en-US",false).TextInfo;
+
 
         public Library(string name)
         {
             Name = name;
         }
 
-        public Library()
+        public void SetNovels() 
         {
-            TextBooks = new List<TextBook>();
-            Albums = new List<Album>();
-            AudioBooks = new List<AudioBook>();
-            Borrowers = new List<Borrower>();
-        }
-        public void AddNovel(Novel novel)
-        {
-            Novels.Add(novel);
+            Novels.Add(new Novel ("The Cat in the Hat", "Dr Suess", 1957, "Children"));
+            Novels.Add(new Novel ("Oh, the Places You'll Go", "Dr Suess", 1990, "Children"));
+            Novels.Add(new Novel ("Emma", "Jane Austen", 1815, "Literature"));
+
+            ListNovels();
         }
 
         public void ListNovels()
@@ -40,23 +38,15 @@ namespace LendingLibrary.Models
             }
         }
 
-        public void SetNovels()
+        public void SetTextbooks()
         {
-            var novel1 = new Novel ("The Cat in the Hat", "Dr Suess", 1957, "Children");
-            var novel2 = new Novel ("Oh, the Places You'll Go", "Dr Suess", 1990, "Children");
-            var novel3 = new Novel ("Emma", "Jane Austen", 1815, "Literature");
+            TextBooks.Add (new TextBook ("Fundamentals of Chemistry", "Kate Rowan", 2018, "Chemistry"));
+            TextBooks.Add (new TextBook ("Neurosurgical Care of the Elderley", "Warren R. Selman and Edward Benzel", 1999, "Medicine"));
+            TextBooks.Add (new TextBook ("The New Lawyer", "Nickolas James and Rachael Field", 2019, "Law"));
 
-            AddNovel(novel1);
-            AddNovel(novel2);
-            AddNovel(novel3);
-            ListNovels();
+            ListTextBooks();
         }
-
-        public void AddTextBook(TextBook textBook)
-        {
-            TextBooks.Add(textBook);
-        }
-
+        
         public void ListTextBooks()
         {
             Console.WriteLine($"{Name} - List of Text Books:");
@@ -66,22 +56,12 @@ namespace LendingLibrary.Models
             }
         }
 
-        public void SetTextbooks()
+        public void SetAlbums()
         {
-             var textbook1 = new TextBook ("Fundamentals of Chemistry", "Kate Rowan", 2018, "Chemistry");
-            var textbook2 = new TextBook ("Neurosurgical Care of the Elderley", "Warren R. Selman and Edward Benzel", 1999, "Medicine");
-            var textbook3 = new TextBook ("The New Lawyer", "Nickolas James and Rachael Field", 2019, "Law");
+            Albums.Add (new Album ("Abbey Road", "The Beatles", 10, 1969));
+            Albums.Add (new Album ("Back to Black", "Amy Winehouse", 11, 2006));
 
-            AddTextBook(textbook1);
-            AddTextBook(textbook2);
-            AddTextBook(textbook3);
-
-            ListTextBooks();
-        }
-
-        public void AddAlbum(Album album)
-        {
-            Albums.Add(album);
+            ListAlbums();
         }
 
         public void ListAlbums()
@@ -93,21 +73,14 @@ namespace LendingLibrary.Models
             }
         }
 
-        public void SetAlbums()
+        public void SetAudioBooks()
         {
-            var album1 = new Album ("Abbey Road", "The Beatles", 10, 1969);
-            var album2 = new Album ("Back to Black", "Amy Winehouse", 11, 2006);
+            AudioBooks.Add (new AudioBook ("Dune", "Frank Herbert", 21, 2007));
+            AudioBooks.Add (new AudioBook ("The Eye of the World: Book One of the Wheel of Time", "Robert Jordan", 50, 2004));
 
-            AddAlbum(album1);
-            AddAlbum(album2);
-
-            ListAlbums();
+            ListAudioBooks();
         }
-        public void AddAudioBook(AudioBook audioBook)
-        {
-            AudioBooks.Add(audioBook);
-        }
-
+        
         public void ListAudioBooks()
         {
             Console.WriteLine($"{Name} - List of Audio Books:");
@@ -117,20 +90,13 @@ namespace LendingLibrary.Models
             }
         }
 
-        public void SetAudioBooks()
+        public void SetBorrowers()
         {
-            var audioBook1 = new AudioBook ("Dune", "Frank Herbert", 21, 2007);
-            var audioBook2 = new AudioBook ("The Eye of the World: Book One of the Wheel of Time", "Robert Jordan", 50, 2004);
+            Borrowers.Add (new Borrower ("Jane Lacey", 1111));
+            Borrowers.Add (new Borrower ("Lilith Jones", 1112));
+            Borrowers.Add (new Borrower ("Casey Bourne", 1113));
 
-            AddAudioBook(audioBook1);
-            AddAudioBook(audioBook2);
-
-            ListAudioBooks();
-        }
-
-        public void AddBorrower(Borrower borrower)
-        {
-            Borrowers.Add(borrower);
+            ListBorrowers();
         }
 
         public void ListBorrowers()
@@ -142,122 +108,121 @@ namespace LendingLibrary.Models
             }
         }
 
-        public void SetBorrowers()
-        {
-            var borrower1 = new Borrower ("Jane Lacey", 1111);
-            var borrower2 = new Borrower ("Lilith Jones", 1112);
-            var borrower3 = new Borrower ("Casey Bourne", 1113);
-
-            AddBorrower(borrower1);
-            AddBorrower(borrower2);
-            AddBorrower(borrower3);
-
-            ListBorrowers();
-        }
-
+        
         public void AddLibraryItems()
         {
             while(true)
             {
-                Console.WriteLine();
-                Console.WriteLine("Choose from the following items to add to the library:");
-                Console.WriteLine("novel = add a novel");
-                Console.WriteLine("textbook = add a textbook");
-                Console.WriteLine("album = add an album");
-                Console.WriteLine("audiobook = add an audio book");
-                Console.WriteLine("X = Exit");
+                GiveInstructions();
+                
                 var userInput = Console.ReadLine().ToLower();
                 if (userInput == "x")
                 {
                     break;
                 }
 
-                TextInfo myTI = new CultureInfo("en-US",false).TextInfo;
-
-
                 switch(userInput.ToLower())
                 {
                     case "novel":
-
-                        Console.WriteLine("Enter title:");
-                        var title = Console.ReadLine().ToLower();
-                        Console.WriteLine("Enter author:");
-                        var author = Console.ReadLine().ToLower();
-                        Console.WriteLine("Enter the publication year:");
-                        var publicationYear = int.Parse(Console.ReadLine());
-                        Console.WriteLine("Enter genre:");
-                        var genre = Console.ReadLine().ToLower();
-                        var newNovel = new Novel (myTI.ToTitleCase(title), myTI.ToTitleCase(author), publicationYear, myTI.ToTitleCase(genre));
-                        AddNovel(newNovel);
-                                
-                        Console.WriteLine($"{newNovel.Title} by {newNovel.Author} has been added to the Library.");
-                        Console.WriteLine();
-                        ListNovels();
+                        UserInputNovel();
                         break;
 
                     case "textbook":
-
-                        Console.WriteLine("Enter title:");
-                        var textbookTitle = Console.ReadLine().ToLower();
-                        Console.WriteLine("Enter author:");
-                        var textbookAuthor = Console.ReadLine().ToLower();
-                        Console.WriteLine("Enter the publication year:");
-                        var textbookPublicationYear = int.Parse(Console.ReadLine());
-                        Console.WriteLine("Enter subject:");
-                        var subject = Console.ReadLine().ToLower();
-                        var newTextbook = new TextBook (myTI.ToTitleCase(title = textbookTitle), myTI.ToTitleCase(author = textbookAuthor), publicationYear = textbookPublicationYear, myTI.ToTitleCase(subject));
-                        AddTextBook(newTextbook);
-                                
-                        Console.WriteLine($"{newTextbook.Title} by {newTextbook.Author} has been added to the Library.");
-                        Console.WriteLine();
-                        ListTextBooks();
+                        UserInputTextbook();
                         break;
 
                     case "album":
-
-                        Console.WriteLine("Enter title:");
-                        var albumTitle = Console.ReadLine().ToLower();
-                        Console.WriteLine("Enter artist:");
-                        var artist = Console.ReadLine().ToLower();
-                        Console.WriteLine("Enter number of tracks:");
-                        var numberOfTracks = int.Parse(Console.ReadLine());
-                        Console.WriteLine("Enter the publication year:");
-                        var albumPublicationYear = int.Parse(Console.ReadLine());
-                        var newAlbum = new Album (myTI.ToTitleCase(title = albumTitle), myTI.ToTitleCase(artist), numberOfTracks, publicationYear = albumPublicationYear);
-                        AddAlbum(newAlbum);
-                        
-                                
-                        Console.WriteLine($"{newAlbum.Title} by {newAlbum.Artist} has been added to the Library.");
-                        Console.WriteLine();
-                        ListAlbums();
+                        UserInputAlbum();
                         break;
 
                     case "audiobook":
-
-                        Console.WriteLine("Enter title:");
-                        var audiobookTitle = Console.ReadLine().ToLower();
-                        Console.WriteLine("Enter author:");
-                        var audiobookAuthor = Console.ReadLine().ToLower();
-                        Console.WriteLine("Enter number of tracks:");
-                        var audiobookNumberOfTracks = int.Parse(Console.ReadLine());
-                        Console.WriteLine("Enter the publication year:");
-                        var audiobookPublicationYear = int.Parse(Console.ReadLine());
-                        var newAudiobook = new AudioBook (myTI.ToTitleCase(title = audiobookTitle), myTI.ToTitleCase(author = audiobookAuthor), numberOfTracks = audiobookNumberOfTracks, publicationYear = audiobookPublicationYear);
-                        AddAudioBook(newAudiobook);
-                                
-                        Console.WriteLine($"{newAudiobook.Title} by {newAudiobook.Author} has been added to the Library.");
-                        Console.WriteLine();
-                        ListAudioBooks();
+                        UserInputAudioBook();
                         break;
 
                     default:
-                    Console.WriteLine("I didn't recognise that command.");
-                    break;
-                    
+                        Console.WriteLine("I didn't recognise that command.");
+                        break;
                 }
-
             }
         }
 
+        public void GiveInstructions()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Choose from the following items to add to the library:");
+            Console.WriteLine("novel = add a novel");
+            Console.WriteLine("textbook = add a textbook");
+            Console.WriteLine("album = add an album");
+            Console.WriteLine("audiobook = add an audio book");
+            Console.WriteLine("X = Exit");
+        }
+        
+        public void UserInputNovel()
+        {
+            Console.WriteLine("Enter title:");
+            var title = Console.ReadLine().ToLower();
+            Console.WriteLine("Enter author:");
+            var author = Console.ReadLine().ToLower();
+            Console.WriteLine("Enter the publication year:");
+            var publicationYear = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter genre:");
+            var genre = Console.ReadLine().ToLower();
+            Novels.Add (new Novel (titleCase.ToTitleCase(title), titleCase.ToTitleCase(author), publicationYear, titleCase.ToTitleCase(genre)));
+                    
+            Console.WriteLine($"{titleCase.ToTitleCase(title)} by {titleCase.ToTitleCase(author)} has been added to the Library.");
+            Console.WriteLine();
+            ListNovels();
+        }
+
+        public void UserInputTextbook()
+        {
+            Console.WriteLine("Enter title:");
+            var title = Console.ReadLine().ToLower();
+            Console.WriteLine("Enter author:");
+            var author = Console.ReadLine().ToLower();
+            Console.WriteLine("Enter the publication year:");
+            var publicationYear = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter subject:");
+            var subject = Console.ReadLine().ToLower();
+            TextBooks.Add (new TextBook (titleCase.ToTitleCase(title), titleCase.ToTitleCase(author), publicationYear, titleCase.ToTitleCase(subject)));
+                    
+            Console.WriteLine($"{titleCase.ToTitleCase(title)} by {titleCase.ToTitleCase(author)} has been added to the Library.");
+            Console.WriteLine();
+            ListTextBooks();
+        }
+
+        public void UserInputAlbum()
+        {
+            Console.WriteLine("Enter title:");
+            var title = Console.ReadLine().ToLower();
+            Console.WriteLine("Enter artist:");
+            var artist = Console.ReadLine().ToLower();
+            Console.WriteLine("Enter number of tracks:");
+            var numberOfTracks = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the publication year:");
+            var publicationYear = int.Parse(Console.ReadLine());
+            Albums.Add (new Album (titleCase.ToTitleCase(title), titleCase.ToTitleCase(artist), numberOfTracks, publicationYear));                        
+                    
+            Console.WriteLine($"{titleCase.ToTitleCase(title)} by {titleCase.ToTitleCase(artist)} has been added to the Library.");
+            Console.WriteLine();
+            ListAlbums();
+        }
+
+        public void UserInputAudioBook()
+        {
+            Console.WriteLine("Enter title:");
+            var title = Console.ReadLine().ToLower();
+            Console.WriteLine("Enter author:");
+            var author = Console.ReadLine().ToLower();
+            Console.WriteLine("Enter number of tracks:");
+            var numberOfTracks = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the publication year:");
+            var publicationYear = int.Parse(Console.ReadLine());
+            Albums.Add (new Album (titleCase.ToTitleCase(title), titleCase.ToTitleCase(author), numberOfTracks, publicationYear));                        
+                    
+            Console.WriteLine($"{titleCase.ToTitleCase(title)} by {titleCase.ToTitleCase(author)} has been added to the Library.");
+            Console.WriteLine();
+            ListAlbums();
+        }
     }
 }

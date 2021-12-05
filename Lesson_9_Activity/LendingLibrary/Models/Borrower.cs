@@ -1,6 +1,6 @@
 namespace LendingLibrary.Models
 {
-    public class Borrower : Library
+    public class Borrower
     {
         internal string MemberName { get; set; }
         public int MemberNumber { get; set; }
