@@ -1,3 +1,5 @@
+using System;
+
 namespace LendingLibrary.Models
 {
     public class Album : CD
@@ -10,6 +12,11 @@ namespace LendingLibrary.Models
             Artist = artist;
             NumberOfTracks = numberOfTracks;
             PublicationYear = publicationYear;
+        }
+
+        public void DisplayAlbums()
+        {
+            Console.WriteLine($"\t {Title} by {Artist}, {PublicationYear}, {NumberOfTracks} tracks");
         }
     }
     

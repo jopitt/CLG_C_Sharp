@@ -1,3 +1,5 @@
+using System;
+
 namespace LendingLibrary.Models
 {
     public class Borrower
@@ -11,6 +13,9 @@ namespace LendingLibrary.Models
             MemberNumber = memberNumber;
         }
 
-        
+        public void DisplayBorrowers()
+        {
+            Console.WriteLine($"\t {MemberName}, {MemberNumber}");
+        }    
     }
 }

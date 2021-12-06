@@ -14,7 +14,6 @@ namespace LendingLibrary.Models
         internal List<Borrower> Borrowers = new List<Borrower>();
         TextInfo titleCase = new CultureInfo("en-US",false).TextInfo;
 
-
         public Library(string name)
         {
             Name = name;
@@ -34,7 +33,7 @@ namespace LendingLibrary.Models
             Console.WriteLine($"{Name} - List of Novels:");
             foreach (var novel in Novels)
             {
-                Console.WriteLine($"\t {novel.Title} by {novel.Author}, {novel.PublicationYear}, {novel.Genre}");
+                novel.DisplayNovels();
             }
         }
 
@@ -52,7 +51,7 @@ namespace LendingLibrary.Models
             Console.WriteLine($"{Name} - List of Text Books:");
             foreach (var textBook in TextBooks)
             {
-                Console.WriteLine($"\t {textBook.Title} by {textBook.Author}, {textBook.PublicationYear}, {textBook.Subject}");
+                textBook.DisplayTexbooks();
             }
         }
 
@@ -69,7 +68,7 @@ namespace LendingLibrary.Models
             Console.WriteLine($"{Name} - List of Albums:");
             foreach (var album in Albums)
             {
-                Console.WriteLine($"\t {album.Title} by {album.Artist}, {album.PublicationYear}, {album.NumberOfTracks} tracks");
+                album.DisplayAlbums();
             }
         }
 
@@ -86,7 +85,7 @@ namespace LendingLibrary.Models
             Console.WriteLine($"{Name} - List of Audio Books:");
             foreach (var audioBook in AudioBooks)
             {
-                Console.WriteLine($"\t {audioBook.Title} by {audioBook.Author}, {audioBook.PublicationYear}, {audioBook.NumberOfTracks} tracks");
+                audioBook.DisplayAudioBooks();
             }
         }
 
@@ -104,7 +103,7 @@ namespace LendingLibrary.Models
             Console.WriteLine($"{Name} - List of Borrowers:");
             foreach (var borrower in Borrowers)
             {
-                Console.WriteLine($"\t {borrower.MemberName}, {borrower.MemberNumber}");
+                borrower.DisplayBorrowers();
             }
         }
 

@@ -1,3 +1,5 @@
+using System;
+
 namespace LendingLibrary.Models
 {
     public class AudioBook : CD
@@ -10,6 +12,11 @@ namespace LendingLibrary.Models
             Author = author;
             NumberOfTracks = numberOfTracks;
             PublicationYear = publicationYear;
+        }
+
+        public void DisplayAudioBooks()
+        {
+            Console.WriteLine($"\t {Title} by {Author}, {PublicationYear}, {NumberOfTracks} tracks");
         }
     }
     

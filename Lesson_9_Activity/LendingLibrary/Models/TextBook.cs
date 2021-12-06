@@ -1,3 +1,5 @@
+using System;
+
 namespace LendingLibrary.Models
 {
     public class TextBook : Book
@@ -12,8 +14,10 @@ namespace LendingLibrary.Models
             Subject = subject;
         }
 
-
-
+        public void DisplayTexbooks()
+        {
+            Console.WriteLine($"\t {Title} by {Author}, {PublicationYear}, {Subject}");
+        }
     }
     
 }

@@ -1,3 +1,5 @@
+using System;
+
 namespace LendingLibrary.Models
 {
     public class Novel : Book
@@ -11,11 +13,10 @@ namespace LendingLibrary.Models
             Genre = genre;
         }
 
-        
-
-
-        
-
+        public void DisplayNovels()
+        {
+            Console.WriteLine($"\t {Title} by {Author}, {PublicationYear}, {Genre}");
+        }
     }
 
 }
