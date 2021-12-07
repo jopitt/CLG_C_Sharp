@@ -1,0 +1,15 @@
+/Users/jopittendreigh/Documents/C#/Lesson_10_Polymorphism/Lesson_10_Activity/RideShare/bin/Debug/net5.0/RideShare.deps.json
+/Users/jopittendreigh/Documents/C#/Lesson_10_Polymorphism/Lesson_10_Activity/RideShare/bin/Debug/net5.0/RideShare.runtimeconfig.json
+/Users/jopittendreigh/Documents/C#/Lesson_10_Polymorphism/Lesson_10_Activity/RideShare/bin/Debug/net5.0/RideShare.runtimeconfig.dev.json
+/Users/jopittendreigh/Documents/C#/Lesson_10_Polymorphism/Lesson_10_Activity/RideShare/bin/Debug/net5.0/RideShare.dll
+/Users/jopittendreigh/Documents/C#/Lesson_10_Polymorphism/Lesson_10_Activity/RideShare/bin/Debug/net5.0/ref/RideShare.dll
+/Users/jopittendreigh/Documents/C#/Lesson_10_Polymorphism/Lesson_10_Activity/RideShare/bin/Debug/net5.0/RideShare.pdb
+/Users/jopittendreigh/Documents/C#/Lesson_10_Polymorphism/Lesson_10_Activity/RideShare/obj/Debug/net5.0/RideShare.csproj.AssemblyReference.cache
+/Users/jopittendreigh/Documents/C#/Lesson_10_Polymorphism/Lesson_10_Activity/RideShare/obj/Debug/net5.0/RideShare.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jopittendreigh/Documents/C#/Lesson_10_Polymorphism/Lesson_10_Activity/RideShare/obj/Debug/net5.0/RideShare.AssemblyInfoInputs.cache
+/Users/jopittendreigh/Documents/C#/Lesson_10_Polymorphism/Lesson_10_Activity/RideShare/obj/Debug/net5.0/RideShare.AssemblyInfo.cs
+/Users/jopittendreigh/Documents/C#/Lesson_10_Polymorphism/Lesson_10_Activity/RideShare/obj/Debug/net5.0/RideShare.csproj.CoreCompileInputs.cache
+/Users/jopittendreigh/Documents/C#/Lesson_10_Polymorphism/Lesson_10_Activity/RideShare/obj/Debug/net5.0/RideShare.dll
+/Users/jopittendreigh/Documents/C#/Lesson_10_Polymorphism/Lesson_10_Activity/RideShare/obj/Debug/net5.0/ref/RideShare.dll
+/Users/jopittendreigh/Documents/C#/Lesson_10_Polymorphism/Lesson_10_Activity/RideShare/obj/Debug/net5.0/RideShare.pdb
+/Users/jopittendreigh/Documents/C#/Lesson_10_Polymorphism/Lesson_10_Activity/RideShare/obj/Debug/net5.0/RideShare.genruntimeconfig.cache
