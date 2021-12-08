@@ -8,5 +8,10 @@ namespace RideShare.Models
         {
             DistanceAwayInKm = distanceAwayInKm;
         }
+
+        public override void ReportDistance()
+		{
+			Console.WriteLine($"There is a car {DistanceAwayInKm}km away.");
+		}
 	}
 }
