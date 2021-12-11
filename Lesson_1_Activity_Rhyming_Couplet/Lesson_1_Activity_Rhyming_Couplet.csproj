@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>Lesson_1_Activity</RootNamespace>
+    <RootNamespace>Lesson_1_Activity_Rhyming_Couplet</RootNamespace>
   </PropertyGroup>
 
 </Project>
