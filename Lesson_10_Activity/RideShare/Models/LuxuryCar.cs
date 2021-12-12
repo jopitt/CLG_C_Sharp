@@ -9,9 +9,8 @@ namespace RideShare.Models
             DistanceAwayInKm = distanceAwayInKm;
         }
 	
-		public override void ReportDistance()
-		{
-			Console.WriteLine($"You're in for a smooth ride! There is a luxury vehicle {DistanceAwayInKm}km away.");
-		}
+	public override void ReportDistance()
+	{
+		Console.WriteLine($"You're in for a smooth ride! There is a luxury vehicle {DistanceAwayInKm}km away.");
 	}
 }
